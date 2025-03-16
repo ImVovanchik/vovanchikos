@@ -1,1 +1,87 @@
-body{font-family:Arial, Helvetica, sans-serif;background-image:url('../img/vovanchikos.png');background-size:stretch;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../img/vovanchikos.png');
+  background-size: stretch;
+  overflow-x: hidden;
+}
+
+.taskbar {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 1.0);
+  border-radius: 15px;
+  z-index: 9999;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.transparent {
+  opacity: 0.7;
+}
+
+.blur {
+  backdrop-filter: blur(10px);
+}
+
+.menu-start-button {
+  position: relative;
+  background-color: rgba(54, 54, 54, 552);
+  color: rgba(255, 255, 255, 1.0);
+  border-radius: 15px;
+  padding: 5px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease-out;
+}
+.menu-start-button img {
+    opacity: 100%;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+.menu-start-button:hover {
+    background-color: rgba(124, 124, 124, 0.9);
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    position: absolute;
+    right: 10px;
+}
+button {
+    background-color: rgba(54, 54, 54, 552);
+    color: rgba(255, 255, 255, 1.0);
+    border-radius: 15px;
+    padding: 5px;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease-out;
+}
+button:hover {
+    background-color: rgba(124, 124, 124, 0.9);
+}
+button:disabled {
+    background-color: rgba(54, 54, 54, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    cursor: not-allowed;
+}
+button:focus {
+    outline: none;
+    background-color: rgba(77, 77, 77, 0.9);
+}
+.desktop {
+    user-select: none;
+}

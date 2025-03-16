@@ -14,7 +14,7 @@ let warnmsg =
 Пожалуйста, сообщайте об ошибках в репозиторий проекта: https://github.com/ImVovanchik/VovanchikOS
 
 Ещё, если вы где-то купили этот продукт, то вас обманули. Этот продукт бесплатный и всегда будет бесплатным, так как у этого проекта всегда есть открытый исходный код на Github.
-Платные версии этого продукта можно репортнуть мне на почту: e7ycm77x@duck.com
+Платные версии этого продукта, сделанные мошенниками, можно репортнуть мне на почту: e7ycm77x@duck.com
 `
 
 function welcome() {
@@ -38,5 +38,14 @@ window.addEventListener('error', function(event) {
 
 Сообщите нам об этой ошибке в: https://github.com/ImVovanchik/VovanchikOS/issues/new
     `;
+    console.error(errorMessage);
     alert(errorMessage);
 });
+function quit() {
+    console.debug("[DEBUG] Закрывается сессия VovanchikOS...");
+    window.close();
+}
+function openMenu() {
+    console.debug("[DEBUG] Открытие меню...");
+    alert("Меню пуск ещё не сделан. Подождите следующих обновлений.");
+}
