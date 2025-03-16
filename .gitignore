@@ -40,3 +40,4 @@ coverage/
 *.snap
 *.map
 *.tsbuildinfo
+assets/img/**/*.*~
