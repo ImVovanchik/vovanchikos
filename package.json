@@ -3,9 +3,18 @@
     "version": "0.0.1",
     "main": "main.js",
     "scripts": {
-      "start": "electron ."
+      "start": "electron .",
+      "build:win": "electron-packager . vovanchikos --platform=win32 --arch=x64 --overwrite",
+      "build:mac": "electron-packager . vovanchikos --platform=darwin --arch=x64 --overwrite",
+      "build:linux": "electron-packager . vovanchikos --platform=linux --arch=x64 --overwrite",
+      "build32:win": "electron-packager . vovanchikos --platform=win32 --arch=ia32 --overwrite",
+      "build32:mac": "electron-packager . vovanchikos --platform=darwin --arch=ia32 --overwrite",
+      "build32:linux": "electron-packager . vovanchikos --platform=linux --arch=ia32 --overwrite",
+      "build:all": "npm run build:win && npm run build:mac && npm run build:linux",
+      "build32:all": "npm run build32:win && npm run build32:mac && npm run build32:linux"
     },
     "devDependencies": {
-      "electron": "^29.3.0"
+      "electron": "^29.3.0",
+      "electron-packager": "^8.7.2"
     }
   }  
