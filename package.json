@@ -15,6 +15,8 @@
     },
     "devDependencies": {
       "electron": "^29.3.0",
-      "electron-packager": "^8.7.2"
+      "electron-packager": "^8.7.2",
+      "@xmldom/xmldom": "^0.8.4",
+      "plist": ">=3.0.5"
     }
   }  
