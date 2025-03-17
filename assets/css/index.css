@@ -49,6 +49,10 @@ body, html {
   animation-fill-mode: forwards;
 }
 
+.centered {
+  align-items: center;
+}
+
 .menu-element.show {
   animation-name: fadeIn;
 }
