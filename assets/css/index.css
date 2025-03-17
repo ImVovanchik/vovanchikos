@@ -1,8 +1,9 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", "Helvetica", sans-serif;
   background-image: url('../img/vovanchikos.png');
-  background-size: stretch;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .taskbar {
@@ -10,78 +11,68 @@ body {
   bottom: 10px;
   left: 10px;
   right: 10px;
-  padding: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: rgba(255, 255, 255, 1.0);
-  border-radius: 15px;
+  padding: 8px 16px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   z-index: 9999;
-  box-sizing: border-box;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  backdrop-filter: blur(8px);
 }
 
 .transparent {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .blur {
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
-.menu-start-button {
-  position: relative;
-  background-color: rgba(54, 54, 54, 552);
-  color: rgba(255, 255, 255, 1.0);
-  border-radius: 15px;
-  padding: 5px;
-  margin: 0;
+.menu-start-button,
+button {
+  background-color: rgba(54, 54, 54, 0.7);
+  color: #fff;
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin: 0 4px;
   cursor: pointer;
   border: none;
-  outline: none;
-  transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
 .menu-start-button img {
-    opacity: 100%;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
+  max-width: 20px;
+  height: auto;
+  vertical-align: middle;
 }
-.menu-start-button:hover {
-    background-color: rgba(124, 124, 124, 0.9);
+
+.menu-start-button:hover,
+button:hover {
+  background-color: rgba(124, 124, 124, 0.9);
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background-color: rgba(54, 54, 54, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+button:focus {
+  outline: none;
+  background-color: rgba(77, 77, 77, 0.9);
 }
 
 .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 10px;
-    position: absolute;
-    right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-right: 10px;
 }
-button {
-    background-color: rgba(54, 54, 54, 552);
-    color: rgba(255, 255, 255, 1.0);
-    border-radius: 15px;
-    padding: 5px;
-    margin: 0;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s ease-out;
-}
-button:hover {
-    background-color: rgba(124, 124, 124, 0.9);
-}
-button:disabled {
-    background-color: rgba(54, 54, 54, 0.5);
-    color: rgba(255, 255, 255, 0.5);
-    cursor: not-allowed;
-}
-button:focus {
-    outline: none;
-    background-color: rgba(77, 77, 77, 0.9);
-}
+
 .desktop {
-    user-select: none;
+  user-select: none;
 }
