@@ -1,4 +1,5 @@
 # VovanchikOS
+![Скриншот](screenshots/0.1-1/1.png)
 Операционная система сделанная на Electron + Node.JS.
 <br>
 В качестве графического интерфейса тут используется HTML, CSS и JavaScript.

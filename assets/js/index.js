@@ -45,7 +45,22 @@ function quit() {
     console.debug("[DEBUG] Закрывается сессия VovanchikOS...");
     window.close();
 }
-function openMenu() {
-    console.debug("[DEBUG] Открытие меню...");
-    alert("Меню пуск ещё не сделан. Подождите следующих обновлений.");
+function toggleMenu() {
+    let menu = document.getElementById("menuElement");
+    
+    if (menu.style.display === "flex") {
+        menu.classList.remove("show");
+        menu.classList.add("hide");
+        
+        setTimeout(() => {
+            menu.style.display = "none";
+            console.debug("[DEBUG] Меню закрыто.");
+        }, 300);
+    } else {
+        menu.style.display = "flex";
+        menu.classList.remove("hide");
+        menu.classList.add("show");
+        
+        console.debug("[DEBUG] Меню открыто.");
+    }
 }

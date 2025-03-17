@@ -9,12 +9,17 @@
 </head>
 <body>
     <div class="taskbar transparent blur desktop">
-        <vovanchikos-menu-button id="menu" class="menu-start-button" onclick="openMenu();">
+        <vovanchikos-menu-button id="menu" class="menu-start-button" onclick="toggleMenu();">
             <img src="assets/img/cat.png" height="30" \>
         </vovanchikos-menu-button>
         <vovanchikos-item class="right">
             <button onclick="quit();">Выход</button>
         </vovanchikos-item>
+    </div>
+    <div id="menuElement" class="menu-element wrapper" style="display:none;">
+        <div class="container-dark">
+            Это ещё не сделано.
+        </div>
     </div>
 </body>
 </html>
