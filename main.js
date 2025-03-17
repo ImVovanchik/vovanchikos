@@ -6,14 +6,16 @@ function createWindow() {
     fullscreen: true,
     kiosk: true,
     webviewTag: true,
+    title: 'VovanchikOS',
+    frame: false,
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
-      devTools: true, 
+      devTools: false, 
     },
   });
 
-  win.loadFile('index.html');
+  win.loadFile('loading.html');
 
   win.webContents.on('console-message', (event, level, message, line, sourceId) => {
     const levels = ['LOG', 'WARNING', 'ERROR', 'DEBUG', 'INFO'];

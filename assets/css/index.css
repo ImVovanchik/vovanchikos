@@ -15,10 +15,20 @@ html, body {
 }
 
 .wrapper {
-  display: flex;
+  display:grid;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   justify-content: center;
   align-items: center;
+  text-align: center;
   height: 100vh;
+}
+
+.endsession {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 }
 
 @keyframes fadeIn {
@@ -142,6 +152,13 @@ button:focus {
   background-color: rgba(77, 77, 77, 0.9);
 }
 
+spacing {
+  margin-left: 10px;
+}
+bottom-spacing {
+  margin-bottom: 10px;
+}
+
 .right {
   display: flex;
   align-items: center;
@@ -153,4 +170,18 @@ button:focus {
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

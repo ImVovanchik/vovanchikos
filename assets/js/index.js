@@ -43,7 +43,7 @@ window.addEventListener('error', function(event) {
 });
 function quit() {
     console.debug("[DEBUG] Закрывается сессия VovanchikOS...");
-    window.close();
+    window.location.href = "loadingwait.html";
 }
 function toggleEndSessionModal() {
     let modal = document.getElementById("endSessionElement");
