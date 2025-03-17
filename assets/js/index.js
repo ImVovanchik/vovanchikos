@@ -45,6 +45,22 @@ function quit() {
     console.debug("[DEBUG] Закрывается сессия VovanchikOS...");
     window.close();
 }
+function toggleEndSessionModal() {
+    let modal = document.getElementById("endSessionElement");
+    let menu = document.getElementById("menuElement");
+    toggleMenu();
+    if (modal.style.display === "block") {
+        modal.classList.remove("show");
+        modal.classList.add("hide");
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 300);
+    } else {
+        modal.classList.remove("hide");
+        modal.classList.add("show");
+        modal.style.display = "block";
+    }
+}
 function toggleMenu() {
     let menu = document.getElementById("menuElement");
     
@@ -73,6 +89,15 @@ function updateTime() {
     document.getElementById('time').textContent = `${hours}:${minutes}`;
 }
 window.addEventListener('load', function() {
+    document.getElementById("username").textContent = "VovanchikOS";
+    document.getElementById("app1").textContent = "Пример приложения";
+    document.getElementById("app1-desc").textContent = "Приложение сделанное всего-лишь для тестирования. При запуске просто закрывает меню пуск.";
+    document.getElementById("endSession").textContent = "Завершить сессию";
+    document.getElementById("endSessionModalTitle").textContent = "Завершить сессию?";
+    document.getElementById("endSessionModalText").textContent = "Вы уверены, что хотите завершить сессию? Несохранённые данные могут быть утеряны.";
+    // Это не используется
+    //document.getElementById("app-disabled").textContent = "Приложение отключено вашим администратором";
+    //document.getElementById("app-disabled-desc").style.display = "Вы не можете использовать это приложение, так как оно отключено вашим администратором.";
     updateTime();
 });
 setInterval(updateTime, 1000);

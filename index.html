@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Рабочий стол VovanchikOS</title>
@@ -10,17 +10,38 @@
 <body>
     <div class="taskbar transparent blur desktop">
         <vovanchikos-menu-button id="menu" class="menu-start-button" onclick="toggleMenu();">
-            <img src="assets/img/cat.png" height="30" \>
+            <img src="assets/img/cat.png" height="30" />
         </vovanchikos-menu-button>
         <vovanchikos-item class="right">
             <span id="time"></span>
         </vovanchikos-item>
     </div>
+
     <div id="menuElement" class="menu-element wrapper" style="display:none;">
         <div class="container-dark">
-            <p>Это ещё не сделано.</p>
+            <h2>Меню пуск</h2>
+            <b><p><span id="username"></span></b></p>
+            <vovanchikos-menu-items>
+                <button style="display: flex; flex-direction: column;" onclick="toggleMenu();">
+                    <img src="assets/img/cat.png" height="30">
+                    <b><span id="app1">&lt;Название приложения не найдено&gt;</span></b>
+                    <span id="app1-desc" class="menu-appdescription">Описание приложения отсуствует</span>
+                </button>                
+            </vovanchikos-menu-items>
             <center>
-                <button onclick="quit();">Выход</button>
+                <br>
+                <button onclick="toggleEndSessionModal();"><span id="endSession"></span></button>
+            </center>
+        </div>
+    </div>
+    <div id="endSessionElement" class="menu-element wrapper" style="display:none;">
+        <div class="container-dark">
+            <h2><span id="endSessionModalTitle"></span></h2>
+            <p><span id="endSessionModalText"></span></p>
+            <center>
+                <br>
+                <button onclick="quit();">Да</button>
+                <button onclick="toggleEndSessionModal();">Нет</button>
             </center>
         </div>
     </div>
