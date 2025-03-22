@@ -17,7 +17,7 @@ function createWindow() {
     },
   });
 
-  win.loadFile('filesystem/uinst/oobe/intro.html');
+  win.loadFile('loading.html');
 
   win.webContents.on('console-message', (event, level, message, line, sourceId) => {
     const levels = ['LOG', 'WARNING', 'ERROR', 'DEBUG', 'INFO'];
