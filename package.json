@@ -11,11 +11,13 @@
       "build32:mac": "electron-packager . vovanchikos --platform=darwin --arch=ia32 --overwrite",
       "build32:linux": "electron-packager . vovanchikos --platform=linux --arch=ia32 --overwrite",
       "build:all": "npm run build:win && npm run build:mac && npm run build:linux",
-      "build32:all": "npm run build32:win && npm run build32:mac && npm run build32:linux"
+      "build32:all": "npm run build32:win && npm run build32:mac && npm run build32:linux",
+      "clean:modules": "node clean.js",
+      "removecookies": "node removecookies.js"
     },
     "devDependencies": {
       "electron": "^29.3.0",
-      "electron-packager": "^8.7.2",
+      "@electron/packager": "^18.3.6",
       "@xmldom/xmldom": "^0.8.4",
       "plist": ">=3.0.5"
     }

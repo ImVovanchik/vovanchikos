@@ -8,6 +8,8 @@ function createWindow() {
     webviewTag: true,
     title: 'VovanchikOS',
     frame: false,
+    width: 1024,
+    height: 768,
     autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
@@ -15,7 +17,7 @@ function createWindow() {
     },
   });
 
-  win.loadFile('loading.html');
+  win.loadFile('filesystem/uinst/oobe/intro.html');
 
   win.webContents.on('console-message', (event, level, message, line, sourceId) => {
     const levels = ['LOG', 'WARNING', 'ERROR', 'DEBUG', 'INFO'];

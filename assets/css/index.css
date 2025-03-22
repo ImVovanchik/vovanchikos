@@ -185,3 +185,7 @@ bottom-spacing {
   top: 50%;
   transform: translateY(-50%);
 }
+
+.endsession {
+  border-radius: 0;
+}
