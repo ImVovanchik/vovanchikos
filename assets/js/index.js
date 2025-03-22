@@ -90,6 +90,7 @@ function updateTime() {
 }
 window.addEventListener('load', function() {
     document.getElementById("username").textContent = "VovanchikOS";
+    document.getElementById("version").textContent = "0.0.1-dev";
     document.getElementById("app1").textContent = "Пример приложения";
     document.getElementById("app1-desc").textContent = "Приложение сделанное всего-лишь для тестирования. При запуске просто закрывает меню пуск.";
     document.getElementById("endSession").textContent = "Завершить сессию";
