@@ -1,0 +1,1 @@
+this.document.getElementById("installerTitle").textContent = "Установка VovanchikOS";
